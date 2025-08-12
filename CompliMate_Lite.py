@@ -63,12 +63,6 @@ for item in shared_items:
 # ------------------------
 
 class CompliMateLite:
-   import os
-import json
-import faiss
-from sentence_transformers import SentenceTransformer
-
-class CompliMateLite:
     def __init__(self,
                  rag_folder_lite=None,   # Path to RAG docs folder
                  meta_folder_lite=None): # Path to META folder
@@ -610,4 +604,5 @@ class CompliMateLite:
             return None
 
         return docx_path
+
 
