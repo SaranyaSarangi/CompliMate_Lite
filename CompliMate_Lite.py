@@ -77,9 +77,9 @@ class CompliMateLite:
 
         # Default to folders inside repo if not provided
         if rag_folder_lite is None:
-            rag_folder_lite = os.path.join(base_dir, "RAG_folder_lite")
+            rag_folder_lite = os.path.join(base_dir, "RAG_folder_lite") #your rag folder path
         if meta_folder_lite is None:
-            meta_folder_lite = os.path.join(base_dir, "meta_folder_lite")
+            meta_folder_lite = os.path.join(base_dir, "meta_folder_lite") #your meta folder path
 
         self.rag_folder_lite = rag_folder_lite
         self.meta_folder_lite = meta_folder_lite
@@ -610,3 +610,4 @@ class CompliMateLite:
             return None
 
         return docx_path
+
