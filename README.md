@@ -24,6 +24,30 @@ Or checkout the demo👉🏻 **[DEMO📹](https://github.com/SaranyaSarangi/Comp
 - Cloud-hosted: Runs on Streamlit Community Cloud for easy access without complex setup.
 - Has AI powered version **CompliMate** 
 
+## 🛠️ Tech Stack
+
+**Frontend & UI**
+- [Streamlit](https://streamlit.io/) – for building the interactive user interface
+
+**Document Processing**
+- [python-docx](https://python-docx.readthedocs.io/) – for reading DOCX files
+- [pdf2docx](https://pypi.org/project/pdf2docx/) – for converting PDF files to DOCX format(process includes conversion of PDF file to DOCX for better retrieval)
+
+**Search & Retrieval**
+- [FAISS](https://faiss.ai/) – for efficient similarity search
+- [sentence-transformers](https://www.sbert.net/) – for generating text embeddings
+- [difflib](https://docs.python.org/3/library/difflib.html) – for fuzzy matching of text
+
+**Data Handling**
+- `os`, `json`, `hashlib`, `pickle` – for file handling, metadata storage, caching, and hashing
+
+**Version Control & Deployment**
+- [Git](https://git-scm.com/) & [GitHub](https://github.com/) – for version control and code hosting
+- [Streamlit Community Cloud](https://streamlit.io/cloud) – for deployment with auto-updates from GitHub
+
+**Source code language**
+- 🐍Python
+
 ---
 
 ## ⚙️ Getting Started
