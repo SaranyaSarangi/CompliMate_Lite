@@ -1,11 +1,12 @@
 # CompliMate Lite
 **CompliMate Lite helps you quickly find relevant rules, sections, and guidelines within petroleum compliance documents — making regulatory navigation simpler and faster.**
-
+Click to view demo👇🏻:
 <p align="center">
   <a href="assets/CompliMate_Lite-Screen Recording.mp4">
     <img src="assets/CompliMate_Lite interface.png" alt="Demo Preview" width="600"/>
   </a>
 </p>
+Or checkout the demo👉🏻 [DEMO📹](https://github.com/SaranyaSarangi/CompliMate_Lite/blob/main/assets/CompliMate_Lite-Screen%20Recording.mp4)
 
 ---
 
