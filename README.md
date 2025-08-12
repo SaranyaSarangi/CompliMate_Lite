@@ -1,4 +1,4 @@
-# CompliMate_Lite
+# CompliMate Lite
 **CompliMate Lite helps you quickly find relevant rules, sections, and guidelines within petroleum compliance documents — making regulatory navigation simpler and faster.**
 
 <p align="center">
@@ -14,8 +14,6 @@
 - Your smart companion for quick lookups and clear insights from dense regulatory files.
 - This project was created as part of an internship program for **Reliance BP Mobility Limited (d/b/a Jio-bp)**.
 - This project processes DOCX and PDF regulatory documents using python-docx and pdf2docx, converts their content into searchable embeddings with sentence-transformers, and uses FAISS for fast similarity search to help users quickly find relevant sections. It efficiently manages document metadata and caching to ensure smooth performance.
-
----
 
 ## ✨ Features
 
@@ -50,6 +48,8 @@ pip install -r requirements.txt
 ```bash
 streamlit run app.py
 ```
+---
+
 ## 📦 Usage
 - How users can use the app:
 Users can enter words or phrases for their concerned topic and click 'Submit'.
@@ -61,7 +61,7 @@ CompliMate Lite will return relevant sections from the files uploaded in RAG fol
 
 ## 🛠️ Deployment
 - This app is deployed via Streamlit Community Cloud.
-- Visit: [CompliMate Lite](https://complimatelite-ccfsz8qvsmmjfqvrjkkbqq.streamlit.app/)
+- For live app visit : [CompliMate Lite](https://complimatelite-ccfsz8qvsmmjfqvrjkkbqq.streamlit.app/)
 - App auto-updates whenever code is pushed to the main branch on GitHub.
 
 You can also deploy locally or on your preferred cloud platform.
@@ -77,7 +77,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## 📞 Contact
 - Email – sharanya.sarangi@gmail.com
 - LinkedIn - linkedin.com/in/saranya-sarangi-5b3745374
-- Project Link: https://github.com/SaranyaSarangi/CompliMate_Lite
+- Source Code : https://github.com/SaranyaSarangi/CompliMate_Lite
 
 ## 🎉 Acknowledgments
 I would like to sincerely thank **Reliance BP Mobility Limited (d/b/a Jio-bp)** for providing me the valuable opportunity to work on this project as part of their internship program. Their support and guidance were instrumental in bringing this project to life.
