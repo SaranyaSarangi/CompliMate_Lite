@@ -63,39 +63,51 @@ for item in shared_items:
 # ------------------------
 
 class CompliMateLite:
+   import os
+import json
+import faiss
+from sentence_transformers import SentenceTransformer
+
+class CompliMateLite:
     def __init__(self,
-                 rag_folder_lite="rag_folder_lite",  # Path to the folder containing RAG documents
-                 meta_folder_lite="meta_folder_lite"  # Path to the folder for metadata and indexes
-                 ):
-                    
+                 rag_folder_lite=None,   # Path to RAG docs folder
+                 meta_folder_lite=None): # Path to META folder
         
+        base_dir = os.path.dirname(__file__)  # Where this file is located
+
+        # Default to folders inside repo if not provided
+        if rag_folder_lite is None:
+            rag_folder_lite = os.path.join(base_dir, "RAG_folder_lite")
+        if meta_folder_lite is None:
+            meta_folder_lite = os.path.join(base_dir, "meta_folder_lite")
+
         self.rag_folder_lite = rag_folder_lite
         self.meta_folder_lite = meta_folder_lite
         os.makedirs(self.meta_folder_lite, exist_ok=True)
 
-        # filenames (consistent)
+        # File paths inside META folder
         self.meta_file = os.path.join(self.meta_folder_lite, "section_meta_lite.json")
         self.processed_file = os.path.join(self.meta_folder_lite, "processed_lite.json")
         self.index_file = os.path.join(self.meta_folder_lite, "section_index_lite.faiss")
         self.paragraph_index_file = os.path.join(self.meta_folder_lite, "paragraph_index_lite.faiss")
         self.paragraphs_file = os.path.join(self.meta_folder_lite, "paragraphs_lite.pkl")
 
-        # persistence for learned roles/shared headings
+        # Persistence for learned roles/shared headings
         self.roles_file = os.path.join(self.meta_folder_lite, "roles_map.json")
         self.shared_file = os.path.join(self.meta_folder_lite, "shared_items.json")
 
-        # model + placeholders
+        # Model setup
         self.model = SentenceTransformer("multi-qa-MiniLM-L6-cos-v1")
         dim = self.model.get_sentence_embedding_dimension()
         self.index = None
         self.paragraph_index = None
 
-       # in-memory stores
-        self.meta = []        # list of section metadata dicts
-        self.paragraphs = []  # list of paragraph metadata dicts
-        self.processed = {}   # filename -> hash
+        # In-memory stores
+        self.meta = []
+        self.paragraphs = []
+        self.processed = {}
 
-        # load processed map early if present
+        # Load processed map early if present
         if os.path.exists(self.processed_file):
             try:
                 with open(self.processed_file, "r", encoding="utf-8") as f:
@@ -103,25 +115,23 @@ class CompliMateLite:
             except Exception as e:
                 print(f"[WARN] Could not load processed file: {e}")
 
-        # Merge persisted roles/shared (uses self.processed)
+        # Merge persisted roles/shared
         self._load_persisted_roles()
 
-
-        # If all required persisted files exist, load them; otherwise build index
+        # If all index/meta files exist → load, else build fresh
         required = [self.meta_file, self.processed_file,
                     self.index_file, self.paragraph_index_file, self.paragraphs_file]
         if all(os.path.exists(p) for p in required):
             self._load_all()
-            # print summary
             print("Meta entries:", len(self.meta))
             print("Section index size:", self.index.ntotal)
             print("Paragraphs entries:", len(self.paragraphs))
             print("Paragraph index size:", self.paragraph_index.ntotal)
         else:
-            # create empty indexes and then build from documents
             self.index = faiss.IndexFlatL2(dim)
             self.paragraph_index = faiss.IndexFlatL2(dim)
             self._build_index()
+
 
     def _get_file_hash(self, filepath):
         hasher = hashlib.md5()
@@ -598,4 +608,5 @@ class CompliMateLite:
         except Exception as e:
             print(f"[ERROR] PDF conversion failed for {pdf_path}: {e}")
             return None
+
         return docx_path
