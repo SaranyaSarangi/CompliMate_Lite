@@ -6,7 +6,8 @@ Click to view demo👇🏻:
     <img src="assets/CompliMate_Lite interface.png" alt="Demo Preview" width="600"/>
   </a>
 </p>
-Or checkout the demo👉🏻 [DEMO📹](https://github.com/SaranyaSarangi/CompliMate_Lite/blob/main/assets/CompliMate_Lite-Screen%20Recording.mp4)
+
+Or checkout the demo👉🏻 **[DEMO📹](https://github.com/SaranyaSarangi/CompliMate_Lite/blob/main/assets/CompliMate_Lite-Screen%20Recording.mp4)**
 
 ---
 
