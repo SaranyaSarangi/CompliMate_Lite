@@ -2,7 +2,7 @@ import streamlit as st
 from PIL import Image
 import base64
 from CompliMate_Lite import CompliMateLite  # import backend
-
+import os
 # --- CONFIGURATION ---
 BOT_NAME = "CompliMate Lite"
 ASSETS_DIR = os.path.join(os.path.dirname(__file__), "assets")
@@ -150,4 +150,5 @@ if query:
     del st.session_state["user_input"]
 
     st.rerun()
+
 
