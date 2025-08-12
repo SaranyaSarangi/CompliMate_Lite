@@ -5,9 +5,10 @@ from CompliMate_Lite import CompliMateLite  # import backend
 
 # --- CONFIGURATION ---
 BOT_NAME = "CompliMate Lite"
-BOT_LOGO = "bot_logo.png"  # Path to your bot logo
-BACKGROUND_IMAGE = "background.png"  # Path to your background image
-OVERLAY_IMAGE = "overlay.png"  # Path to your overlay image
+ASSETS_DIR = os.path.join(os.path.dirname(__file__), "assets")
+BOT_LOGO = os.path.join(ASSETS_DIR, "jiobp_logo.png")
+BACKGROUND_IMAGE = os.path.join(ASSETS_DIR, "green_yellow_only_bg.png")
+OVERLAY_IMAGE = BOT_LOGO
 
 # --- FUNCTIONS ---
 def get_base64(file_path):
@@ -149,3 +150,4 @@ if query:
     del st.session_state["user_input"]
 
     st.rerun()
+
