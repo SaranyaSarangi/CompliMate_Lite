@@ -72,6 +72,15 @@ pip install -r requirements.txt
 
 ---
 
+## 🛠️ Deployment
+You can deploy locally or on your preferred cloud platform (I've mentioned about Streamlit Cloud below):  
+1️⃣ Run the app locally:
+```bash
+streamlit run app.py
+```
+2️⃣ Run on Streamlit Community Cloud
+Push your code to a GitHub repository and deploy your app via [Streamlit Community Cloud](https://streamlit.io/cloud).
+
 ## 📦 Usage
 - How users can use the app:
 Users can enter words or phrases for their concerned topic (e.g. "Certifications","Safety fittings",etc.) and click 'Submit'.
@@ -81,14 +90,18 @@ CompliMate Lite will return relevant sections from the files uploaded in RAG fol
 
 ---
 
-## 🛠️ Deployment
-You can deploy locally or on your preferred cloud platform (I've mentioned about Streamlit Cloud below):  
-1️⃣ Run the app locally:
-```bash
-streamlit run app.py
-```
-2️⃣ Run on Streamlit Community Cloud
-Push your code to a GitHub repository and deploy your app via [Streamlit Community Cloud](https://streamlit.io/cloud).
+## 🔍 Pipeline Flow in CompliMate Lite
+**Ingest** – PDF/DOCX files processed, PDFs converted to DOCX for uniform parsing.
+
+**Extract** – Headings, sections, and paragraphs identified and stored with metadata.
+
+**Embed** – Text converted into embeddings via Sentence-Transformers.
+
+**Index** – Embeddings stored in FAISS for fast similarity matching.
+
+**Retrieve** – User queries matched to most relevant sections and displayed directly, without LLM generation.
+
+⚡Fast, lightweight, and offline(no model API to function) — CompliMate_Lite delivers relevant document excerpts instantly.
 
 ---
 
