@@ -2,7 +2,7 @@
 **CompliMate Lite helps you quickly find relevant rules, sections, and guidelines within petroleum compliance documents — making regulatory navigation simpler and faster.**
 ## 🎥 Demo
 Click to view demo👇🏻:
-[![CompliMate Lite Demo](assets/CompliMate_Lite interface.png)](https://github.com/user-attachments/assets/d0a3ea6c-b56d-4518-8f77-70dc5f86e5bd)
+[![CompliMate Lite Demo](assets/CompliMate_Lite_interface.png)](https://github.com/user-attachments/assets/d0a3ea6c-b56d-4518-8f77-70dc5f86e5bd)
 
 ---
 
@@ -102,8 +102,8 @@ Contributions are welcome! Please fork the repo, create a new branch for your fe
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## 📞 Contact
-- Email – sharanya.sarangi@gmail.com
-- LinkedIn - linkedin.com/in/saranya-sarangi-5b3745374
+- Email : sharanya.sarangi@gmail.com
+- [LinkedIn](https://www.linkedin.com/in/saranya-sarangi-5b3745374/)
 
 ## 🎉 Acknowledgments
 I would like to sincerely thank **Reliance BP Mobility Limited (d/b/a Jio-bp)** for providing me the valuable opportunity to work on this project as part of their internship program. Their support and guidance were instrumental in bringing this project to life.
