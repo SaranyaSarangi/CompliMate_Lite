@@ -14,7 +14,7 @@ Or checkout the demo👉🏻 **[DEMO📹](https://github.com/SaranyaSarangi/Comp
 ## 🚀 About the Project
 
 - Your smart companion for quick lookups and clear insights from dense regulatory files.
-- This project was created as part of an internship program for **Reliance BP Mobility Limited (d/b/a Jio-bp)**.
+- **CompliMate Lite** was created as part of an internship program for **Reliance BP Mobility Limited (d/b/a Jio-bp)**.
 - This project processes DOCX and PDF regulatory documents using python-docx and pdf2docx, converts their content into searchable embeddings with sentence-transformers, and uses FAISS for fast similarity search to help users quickly find relevant sections. It efficiently manages document metadata and caching to ensure smooth performance.
 
 ## ✨ Features
@@ -22,7 +22,7 @@ Or checkout the demo👉🏻 **[DEMO📹](https://github.com/SaranyaSarangi/Comp
 - Uploaded petroleum regulatory files (docx/pdf) are searched through and relevant information as per user queries are retrieved.
 - Chatbot style responses
 - Cloud-hosted: Runs on Streamlit Community Cloud for easy access without complex setup.
-- Has AI powered version **CompliMate** 
+- Has AI powered version **[CompliMate](https://github.com/SaranyaSarangi/CompliMate)** 
 
 ## 🛠️ Tech Stack
 
@@ -40,6 +40,7 @@ Or checkout the demo👉🏻 **[DEMO📹](https://github.com/SaranyaSarangi/Comp
 
 **Data Handling**
 - `os`, `json`, `hashlib`, `pickle` – for file handling, metadata storage, caching, and hashing
+- Role-based access mapping – for controlling which sections are visible to specific user roles (retail, non_retail)
 
 **Version Control & Deployment**
 - [Git](https://git-scm.com/) & [GitHub](https://github.com/) – for version control and code hosting
@@ -54,7 +55,7 @@ Or checkout the demo👉🏻 **[DEMO📹](https://github.com/SaranyaSarangi/Comp
 
 ### Prerequisites
 
-- Python 3.8+ (preferably 3.11)
+- Python 3.10+ (preferably 3.11)
 - Streamlit (`pip install streamlit`)
 - Other dependencies the app uses (`pip install -r requirements.txt`)
 
@@ -80,7 +81,7 @@ streamlit run app.py
 - How users can use the app:
 Users can enter words or phrases for their concerned topic and click 'Submit'.
 
-- What output or feedback to expect
+- What output or feedback to expect:
 CompliMate Lite will return relevant sections from the files uploaded in RAG folder.
 
 ---
