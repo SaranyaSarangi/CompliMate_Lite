@@ -112,7 +112,7 @@ CompliMate Lite can currently work on **petroleum regulatory documents only**.
 Contributions are welcome! Please fork the repo, create a new branch for your feature/fix, and submit a pull request.
 
 ## 📄 License
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the Apache-2.0 License - see the LICENSE file for details.
 
 ## 📞 Contact
 - Email : sharanya.sarangi@gmail.com
